@@ -1,0 +1,33 @@
+@use 'initial';
+@use 'variables';
+@use 'header';
+@use 'navbar';
+@use 'modal-navbar';
+@use 'gallery';
+@use 'details';
+@use 'input';
+@use 'modal-cart';
+.main-container {
+  width: 375px;
+  border: 2px solid #0dd047;
+  margin: auto;
+  position: relative;
+}
+
+@media (min-width: 1115px) {
+  .main-container {
+    width: 1115px;
+  }
+}
+
+@media (min-width: 1115px) {
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 2px solid red;
+    padding: 90px 50px;
+    gap: 124px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

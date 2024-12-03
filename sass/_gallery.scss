@@ -1,0 +1,52 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.gallery{
+  // border: 1px solid rgb(17, 0, 255);
+  &__image-container{
+    // border: 5px solid rgb(41, 32, 218);
+    background-image:url(../images/image-product-1.jpg);
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position-y: -35px ;
+  }
+    
+ 
+&__previus{
+  @include mixins.image-btn(170px, 15px, false);
+
+}
+
+&__next{
+@include mixins.image-btn(170px, 320px, false);
+
+}
+&__thumnails{
+  // border: 1px solid rgb(137, 23, 155);
+  display:none;
+  @media (min-width: 1115px){
+    display: flex;
+    justify-content: space-between;
+  }
+}
+  &__thumnail{
+    width: 90px;
+    border-radius: 16px;
+    &:hover{
+      cursor: pointer;
+      border: 3px solid v.$Orange; 
+    }
+    }
+
+@media(min-width: 1115px){
+  width: 446px;
+}
+
+&__image-container{
+  border-radius: 16px;
+  height: 446px;
+  margin-bottom:32px ;
+  background-position-y: 0px ;
+}
+}
